@@ -7,7 +7,7 @@ ENV MULTIHOMED_NETWORK=1
 ENV USER=root
 ENV PATH $HADOOP_HOME/bin/:$PATH
 
-RUN apk --update add net-tools curl netcat  gnupg libsnappy-dev
+RUN apk --update add wget tar bash coreutils procps openssl curl
       
 RUN curl -O https://dist.apache.org/repos/dist/release/hadoop/common/KEYS
 
