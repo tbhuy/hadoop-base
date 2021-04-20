@@ -7,12 +7,7 @@ ENV MULTIHOMED_NETWORK=1
 ENV USER=root
 ENV PATH $HADOOP_HOME/bin/:$PATH
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-      net-tools \
-      curl \
-      netcat \
-      gnupg \
-      libsnappy-dev
+RUN apk --update add net-tools curl netcat  gnupg libsnappy-dev
       
 RUN curl -O https://dist.apache.org/repos/dist/release/hadoop/common/KEYS
 
