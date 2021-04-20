@@ -30,9 +30,3 @@ RUN ln -s /opt/hadoop-$HADOOP_VERSION/etc/hadoop /etc/hadoop
 RUN mkdir /opt/hadoop-$HADOOP_VERSION/logs
 
 RUN mkdir /hadoop-data
-
-ADD entrypoint.sh /entrypoint.sh
-
-RUN chmod a+x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
